@@ -25,6 +25,10 @@ Route::get('about', function () {
     return view('other.about');
 })->name('other.about');
 
+Route::get('message', function(){
+    return view('message');
+})->name('message');
+
 Route::group(['prefix' => 'admin'], function() {
     Route::get('', [
         'uses' => 'PostController@getAdminIndex',
